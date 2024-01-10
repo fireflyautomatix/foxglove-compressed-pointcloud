@@ -1,0 +1,19 @@
+root: true
+
+env:
+  browser: true
+  es2020: true
+  node: false
+
+ignorePatterns:
+  - dist
+
+extends:
+  - plugin:@foxglove/base
+
+overrides:
+  - files: ["*.ts", "*.tsx"]
+    extends:
+      - plugin:@foxglove/typescript
+    parserOptions:
+      project: ./tsconfig.json
